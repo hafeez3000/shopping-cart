@@ -7,12 +7,12 @@ import frappe.website.render
 
 def get_context(context):
 	return {
-		"partners": frappe.db.sql("""select * from `tabSales Partner`
-			where show_in_website=1 order by name asc""", as_dict=True),
+		"partners": frappe.db.sql("""select * from `tabParty`
+			where ifnull(sales_partner, '')!='' and ifnull(show_in_website, 0)=1
+			order by name asc""", as_dict=True),
 		"title": "Partners"
 	}
 
 def clear_cache(doc, trigger):
 	if doc.page_name:
 		frappe.website.render.clear_cache("partners")
-	

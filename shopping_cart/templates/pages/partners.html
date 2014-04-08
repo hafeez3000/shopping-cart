@@ -9,16 +9,16 @@
 		<div class="col-md-3">
 			{% if partner_info.logo -%}
 			<a href="{{ partner_info.page_name }}">
-				<img itemprop="brand" src="{{ partner_info.logo }}" class="partner-logo" 
-					alt="{{ partner_info.partner_name }}" title="{{ partner_info.partner_name }}" />
+				<img itemprop="brand" src="{{ partner_info.logo }}" class="partner-logo"
+					alt="{{ partner_info.party_name }}" title="{{ partner_info.party_name }}" />
 			</a>
 			{%- endif %}
 		</div>
 		<div class="col-md-9">
 			<a href="{{ partner_info.page_name }}">
-				<h4>{{ partner_info.partner_name }}</h4>
+				<h4>{{ partner_info.party_name }}</h4>
 			</a>
-			<p style="color: #999">{{ partner_info.territory }} - {{ partner_info.partner_type }}</p>
+			<p style="color: #999">{{ partner_info.territory }} - {{ partner_info.party_group }}</p>
 			<p>{{ partner_info.introduction }}</p>
 		</div>
 	</div>

@@ -7,13 +7,13 @@
 	<div class="row">
 		<div class="col-md-4">
 			{% if logo -%}
-			<img itemprop="brand" src="{{ logo }}" class="partner-logo" 
-				alt="{{ partner_name }}" title="{{ partner_name }}" />
+			<img itemprop="brand" src="{{ logo }}" class="partner-logo"
+				alt="{{ party_name }}" title="{{ party_name }}" />
 			<br><br>
 			{%- endif %}
 			<address>
-				{% if partner_website -%}<p><a href="{{ partner_website }}" 
-					target="_blank">{{ partner_website }}</a></p>{%- endif %}
+				{% if website -%}<p><a href="{{ website }}"
+					target="_blank">{{ website }}</a></p>{%- endif %}
 				{% if partner_address -%}<p itemprop="address">{{ partner_address }}</p>{%- endif %}
 				{% if phone -%}<p itemprop="telephone">{{ phone }}</p>{%- endif %}
 				{% if email -%}<p itemprop="email"><span class="icon-envelope"></span> {{ email }}</p>{%- endif %}
